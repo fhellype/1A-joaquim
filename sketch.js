@@ -16,7 +16,7 @@
 // uma noite de crimes
 // homem aranha de volta pra casa 
 
-function setup() {
+function setup(idade) {
   createCanvas(400, 400);
 }
 
@@ -51,7 +51,7 @@ function geraRecomendacao() {
     }
 }function draw() {
     background(220);
-    let idade = 15; // exemplo de idade
+    let idade = 15; // exemplo de idade 
     let recomendacao = geraRecomendacao();
     text(recomendacao, width/2, height/2);
 }let campoIdade;function draw() {
@@ -117,7 +117,7 @@ function setup() {
             return "velozes e furiosos";
         }
     }
-}function geraRecomendacao(idade, gostaDeFantasia) {
+}function geraRecomendacao(idade, gostaDeavcentura) {
     if (idade >= 16) {
         if (idade >= 16) {
             return "O menino que descobriu o vento";
