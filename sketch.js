@@ -15,11 +15,29 @@
 //grand turismo
 // uma noite de crimes
 // homem aranha de volta pra casa 
-
+function draw() {
+    background (220);
+    let idade = campoIdade;
+    let recomendacao = geraRecomendacao(idade);
+    text(recomendacao, width/2, height/2);
+}function setup() {
+    createCanvas(400, 400);
+    campoIdade = createInput("15");
+}
 function setup(idade) {
   createCanvas(400, 400);
 }
-
+function geraRecomendacao(idade) {
+    if(idade >= 10) {
+        if(idade >= 14) {
+            return "O menino que descobriu o vento";
+        } else {
+            return "As aventuras de Pi";
+        }
+    } else {
+        return "A viagem de Chihiro";
+    }
+}
 function draw(idade) {
   background(220);
 }let n = 1;
@@ -33,11 +51,11 @@ function draw() {
   }
 }function draw() {
     background(220);
-    let recomendacao = "carga maxima ";
+    let recomendacao = "idade ";
     text(recomendacao, width/2, height/2);
 }function draw() {
     background(220);
-    let recomendacao = geraRecomendacao();
+    let recomendacao = geraRecomendacao(idade);
     text(recomendacao, width/2, height/2);
 }
 
@@ -138,7 +156,7 @@ function setup() {
 }function setup() {
     createCanvas(800, 400);
     campoIdade = createInput("15");
-    campoFantasia = createCheckbox("Gosta de fantasia?");
+    campoFantasia = createCheckbox("Gosta de ação?");
 }
 
 function draw() {
@@ -279,7 +297,7 @@ function setup() {
 }let idade = 15;
 let possuiPermissao = true;
 
-function verificaIdade(idade, possuiPermissao) {
+function verificaIdade(idade,) {
   if (idade >= 18 || possuiPermissao) {
     return "Você pode dirigir!";
   } else {
@@ -311,7 +329,7 @@ function draw() {
   text(recomendacao, width / 2, height / 2);
 }
 
-function geraRecomendacao(orcamento, gostaDePraia, gostaDefilmes) {
+function geraRecomendacao(recomendadordefilmes, gostaDeaventuras, gostaDefilmes) {
   if (orcamento >= 1000) {
     if (gostaDePraia) {
       return "homem aranha longe de casa.";
@@ -321,9 +339,9 @@ function geraRecomendacao(orcamento, gostaDePraia, gostaDefilmes) {
       return "tartarugas ninjas";
     }
   } else if (orcamento >= 500) {
-    if (gostaDePraia) {
+    if (gostaDeaventuras) {
       return "grand turismo";
-    } else if (gostaDeCidadesGrandes) {
+    } else if (gostaDeaçao) {
       return "o ataque";
     } else {
       return "bad boys.";
@@ -337,4 +355,14 @@ function geraRecomendacao(orcamento, gostaDePraia, gostaDefilmes) {
       return "breaking bread.";
     }
   }
-}                                                                                                
+}              function geraRecomendacao(idade) {
+    if(idade >= 10) {
+        if(idade >= 16) {
+            return "gran turismo";
+        } else {
+            return "vingadores ultimato";
+        }
+    } else {
+        return "stranger things";
+    }
+}                                                                                  
